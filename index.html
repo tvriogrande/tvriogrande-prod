@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TV Rio Grande - Vídeos Produzidos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #3f87a6, #ebf8e1, #f69d3c);
+      color: #fff;
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      max-width: 800px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #ffdd57;
+    }
+
+    .video-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .video-list li {
+      background: #222;
+      padding: 1rem;
+      border-radius: 12px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .video-list li:hover {
+      background: #444;
+      transform: scale(1.02);
+    }
+
+    .video-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .video-link {
+      display: inline-block;
+      text-decoration: none;
+      background: #ffdd57;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .video-link:hover {
+      background: #ffe98a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .container h1 {
+        font-size: 1.5rem;
+      }
+
+      .video-title {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎥 Vídeos Produzidos pela TV Rio Grande</h1>
+    <ul class="video-list">
+      <li>
+        <div class="video-title">Fronteira Inaugura Centro de Eventos - DRA. Amal Simbole Campos</div>
+        <a class="video-link" href="https://www.facebook.com/share/v/164QfDrx4x/" target="_blank">Assistir</a>
+      </li>
+      <li>
+        <div class="video-title">Transformação Solidária: Prefeito Oscar Luiz e Amigos Resgatam Dignidade</div>
+        <a class="video-link" href="https://www.facebook.com/share/v/1EUW4b48p1/" target="_blank">Assistir</a>
+      </li>
+      <li>
+        <div class="video-title">TV Rio Grande em Icém: Homenagem Especial para o Dia das Mulheres</div>
+        <a class="video-link" href="https://www.facebook.com/share/v/1ExwitZYsJ/" target="_blank">Assistir</a>
+      </li>
+      <li>
+        <div class="video-title">Moradores de Fronteira Revelam Relatos sobre a Saúde na Cidade</div>
+        <a class="video-link" href="https://www.facebook.com/share/v/1ZZm2LPoHf/" target="_blank">Assistir</a>
+      </li>
+      <li>
+        <div class="video-title">Parabéns Fronteira, 81 anos de muita felicidade e progresso!</div>
+        <a class="video-link" href="https://www.facebook.com/share/v/18wSvJabNj/" target="_blank">Assistir</a>
+      </li>
+      <li>
+        <div class="video-title">Grande Conquista: Inauguração do Fórum em Fronteira</div>
+        <a class="video-link" href="https://www.facebook.com/share/v/1ETw64Xjbq/" target="_blank">Assistir</a>
+      </li>
+      <li>
+        <div class="video-title">Quem trouxe a subestação da Cemig para Fronteira? Descubra!</div>
+        <a class="video-link" href="https://www.facebook.com/share/v/1Fe7nqKSYS/" target="_blank">Assistir</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
