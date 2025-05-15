@@ -1,85 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PRODUZIDOS PELA WEBTV BRASIL</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produzidos pela WebTV Brasil</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
     body {
-      background: #000;
+      background: #111;
       color: #fff;
       padding: 2rem;
-      min-height: 100vh;
     }
 
     h1 {
       text-align: center;
       font-size: 2.5rem;
+      color: #ffdd57;
       margin-bottom: 2rem;
-      color: #facc15;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px 4px #000;
     }
 
-    .grid {
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 400%;
+    }
+
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      padding: 1rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1.5rem;
     }
 
-    .card {
-      background: #1a1a1a;
+    .video-card {
+      background: #222;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
-    .card:hover {
+    .video-card:hover {
       transform: scale(1.03);
     }
 
-    .card img {
+    .video-card img {
       width: 100%;
-      height: 130px;
+      height: 140px;
       object-fit: cover;
     }
 
-    .card-content {
-      padding: 1rem;
+    .video-card .info {
+      padding: 0.8rem;
     }
 
-    .card-title {
+    .video-card .info h3 {
       font-size: 1rem;
       margin-bottom: 0.5rem;
+      color: #ffdd57;
     }
 
-    .card a {
-      display: inline-block;
-      background: #facc15;
+    .video-card .info a {
+      background: #ffdd57;
       color: #000;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
+      padding: 0.4rem 0.8rem;
       border-radius: 6px;
+      text-decoration: none;
       font-weight: bold;
+    }
+
+    .controls {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .controls button {
+      background: #444;
+      border: none;
+      color: #fff;
+      padding: 0.6rem 1rem;
+      margin: 0 0.3rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
       transition: background 0.3s;
     }
 
-    .card a:hover {
-      background: #ffe58f;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
+    .controls button:hover {
+      background: #ffdd57;
+      color: #000;
     }
   </style>
 </head>
@@ -87,63 +102,89 @@
 
   <h1>🎬 PRODUZIDOS PELA WEBTV BRASIL</h1>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x200?text=Centro+de+Eventos" alt="Thumb do vídeo">
-      <div class="card-content">
-        <div class="card-title">Fronteira Inaugura Centro de Eventos - DRA. Amal Simbole Campos</div>
-        <a href="https://www.facebook.com/share/v/164QfDrx4x/" target="_blank">Assistir</a>
-      </div>
-    </div>
+  <div class="carousel">
+    <div class="slides" id="slides">
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x200?text=Transformação+Solidária" alt="Thumb do vídeo">
-      <div class="card-content">
-        <div class="card-title">Transformação Solidária: Prefeito Oscar Luiz e Amigos</div>
-        <a href="https://www.facebook.com/share/v/1EUW4b48p1/" target="_blank">Assistir</a>
+      <!-- Slide 1 - Eventos -->
+      <div class="slide">
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200?text=Centro+de+Eventos" alt="">
+          <div class="info">
+            <h3>Inauguração do Centro de Eventos</h3>
+            <a href="https://www.facebook.com/share/v/164QfDrx4x/" target="_blank">Assistir</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200?text=Fórum+Fronteira" alt="">
+          <div class="info">
+            <h3>Inauguração do Fórum em Fronteira</h3>
+            <a href="https://www.facebook.com/share/v/1ETw64Xjbq/" target="_blank">Assistir</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x200?text=Dia+das+Mulheres" alt="Thumb do vídeo">
-      <div class="card-content">
-        <div class="card-title">TV Rio Grande em Icém: Homenagem Especial para o Dia das Mulheres</div>
-        <a href="https://www.facebook.com/share/v/1ExwitZYsJ/" target="_blank">Assistir</a>
+      <!-- Slide 2 - Ações Sociais -->
+      <div class="slide">
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200?text=Transformação+Solidária" alt="">
+          <div class="info">
+            <h3>Transformação Solidária</h3>
+            <a href="https://www.facebook.com/share/v/1EUW4b48p1/" target="_blank">Assistir</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200?text=Saúde+em+Fronteira" alt="">
+          <div class="info">
+            <h3>Relatos sobre Saúde em Fronteira</h3>
+            <a href="https://www.facebook.com/share/v/1ZZm2LPoHf/" target="_blank">Assistir</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x200?text=Saúde+em+Fronteira" alt="Thumb do vídeo">
-      <div class="card-content">
-        <div class="card-title">Moradores de Fronteira Revelam Relatos sobre a Saúde na Cidade</div>
-        <a href="https://www.facebook.com/share/v/1ZZm2LPoHf/" target="_blank">Assistir</a>
+      <!-- Slide 3 - Especiais -->
+      <div class="slide">
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200?text=Dia+das+Mulheres" alt="">
+          <div class="info">
+            <h3>Especial Dia das Mulheres - Icém</h3>
+            <a href="https://www.facebook.com/share/v/1ExwitZYsJ/" target="_blank">Assistir</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x200?text=Aniversário+Fronteira" alt="Thumb do vídeo">
-      <div class="card-content">
-        <div class="card-title">Parabéns Fronteira, 81 anos de felicidade e progresso!</div>
-        <a href="https://www.facebook.com/share/v/18wSvJabNj/" target="_blank">Assistir</a>
+      <!-- Slide 4 - Notícias Locais -->
+      <div class="slide">
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200?text=Aniversário+Fronteira" alt="">
+          <div class="info">
+            <h3>81 Anos de Fronteira</h3>
+            <a href="https://www.facebook.com/share/v/18wSvJabNj/" target="_blank">Assistir</a>
+          </div>
+        </div>
+        <div class="video-card">
+          <img src="https://via.placeholder.com/400x200?text=Subestação+CEMIG" alt="">
+          <div class="info">
+            <h3>Subestação da Cemig</h3>
+            <a href="https://www.facebook.com/share/v/1Fe7nqKSYS/" target="_blank">Assistir</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x200?text=Inauguração+do+Fórum" alt="Thumb do vídeo">
-      <div class="card-content">
-        <div class="card-title">Grande Conquista: Inauguração do Fórum em Fronteira</div>
-        <a href="https://www.facebook.com/share/v/1ETw64Xjbq/" target="_blank">Assistir</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/400x200?text=Subestação+Cemig" alt="Thumb do vídeo">
-      <div class="card-content">
-        <div class="card-title">Quem trouxe a subestação da Cemig para Fronteira? Descubra!</div>
-        <a href="https://www.facebook.com/share/v/1Fe7nqKSYS/" target="_blank">Assistir</a>
-      </div>
     </div>
   </div>
 
+  <div class="controls">
+    <button onclick="goToSlide(0)">Eventos</button>
+    <button onclick="goToSlide(1)">Ações Sociais</button>
+    <button onclick="goToSlide(2)">Especiais</button>
+    <button onclick="goToSlide(3)">Notícias</button>
+  </div>
+
+  <script>
+    let slides = document.getElementById('slides');
+    function goToSlide(n) {
+      slides.style.transform = 'translateX(-' + (n * 100) + '%)';
+    }
+  </script>
 </body>
 </html>
