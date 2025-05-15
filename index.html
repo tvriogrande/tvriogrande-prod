@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TV Rio Grande - Vídeos Produzidos</title>
+  <title>PRODUZIDOS PELA WEBTV BRASIL</title>
   <style>
     * {
       margin: 0;
@@ -13,119 +13,137 @@
     }
 
     body {
-      background: linear-gradient(135deg, #3f87a6, #ebf8e1, #f69d3c);
+      background: #000;
       color: #fff;
       padding: 2rem;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    .container {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-      max-width: 800px;
-      width: 100%;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .container h1 {
-      font-size: 2rem;
+    h1 {
       text-align: center;
-      margin-bottom: 1.5rem;
-      color: #ffdd57;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #facc15;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px #000;
     }
 
-    .video-list {
-      list-style: none;
+    .grid {
       display: grid;
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
     }
 
-    .video-list li {
-      background: #222;
-      padding: 1rem;
+    .card {
+      background: #1a1a1a;
       border-radius: 12px;
-      transition: transform 0.3s, background 0.3s;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
     }
 
-    .video-list li:hover {
-      background: #444;
-      transform: scale(1.02);
+    .card:hover {
+      transform: scale(1.03);
     }
 
-    .video-title {
-      font-size: 1.1rem;
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
       margin-bottom: 0.5rem;
-      color: #fff;
     }
 
-    .video-link {
+    .card a {
       display: inline-block;
-      text-decoration: none;
-      background: #ffdd57;
+      background: #facc15;
       color: #000;
       padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background 0.3s, color 0.3s;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .video-link:hover {
-      background: #ffe98a;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .card a:hover {
+      background: #ffe58f;
     }
 
     @media (max-width: 600px) {
-      .container h1 {
-        font-size: 1.5rem;
-      }
-
-      .video-title {
-        font-size: 1rem;
+      h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎥 Vídeos Produzidos pela TV Rio Grande</h1>
-    <ul class="video-list">
-      <li>
-        <div class="video-title">Fronteira Inaugura Centro de Eventos - DRA. Amal Simbole Campos</div>
-        <a class="video-link" href="https://www.facebook.com/share/v/164QfDrx4x/" target="_blank">Assistir</a>
-      </li>
-      <li>
-        <div class="video-title">Transformação Solidária: Prefeito Oscar Luiz e Amigos Resgatam Dignidade</div>
-        <a class="video-link" href="https://www.facebook.com/share/v/1EUW4b48p1/" target="_blank">Assistir</a>
-      </li>
-      <li>
-        <div class="video-title">TV Rio Grande em Icém: Homenagem Especial para o Dia das Mulheres</div>
-        <a class="video-link" href="https://www.facebook.com/share/v/1ExwitZYsJ/" target="_blank">Assistir</a>
-      </li>
-      <li>
-        <div class="video-title">Moradores de Fronteira Revelam Relatos sobre a Saúde na Cidade</div>
-        <a class="video-link" href="https://www.facebook.com/share/v/1ZZm2LPoHf/" target="_blank">Assistir</a>
-      </li>
-      <li>
-        <div class="video-title">Parabéns Fronteira, 81 anos de muita felicidade e progresso!</div>
-        <a class="video-link" href="https://www.facebook.com/share/v/18wSvJabNj/" target="_blank">Assistir</a>
-      </li>
-      <li>
-        <div class="video-title">Grande Conquista: Inauguração do Fórum em Fronteira</div>
-        <a class="video-link" href="https://www.facebook.com/share/v/1ETw64Xjbq/" target="_blank">Assistir</a>
-      </li>
-      <li>
-        <div class="video-title">Quem trouxe a subestação da Cemig para Fronteira? Descubra!</div>
-        <a class="video-link" href="https://www.facebook.com/share/v/1Fe7nqKSYS/" target="_blank">Assistir</a>
-      </li>
-    </ul>
+
+  <h1>🎬 PRODUZIDOS PELA WEBTV BRASIL</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Centro+de+Eventos" alt="Thumb do vídeo">
+      <div class="card-content">
+        <div class="card-title">Fronteira Inaugura Centro de Eventos - DRA. Amal Simbole Campos</div>
+        <a href="https://www.facebook.com/share/v/164QfDrx4x/" target="_blank">Assistir</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Transformação+Solidária" alt="Thumb do vídeo">
+      <div class="card-content">
+        <div class="card-title">Transformação Solidária: Prefeito Oscar Luiz e Amigos</div>
+        <a href="https://www.facebook.com/share/v/1EUW4b48p1/" target="_blank">Assistir</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Dia+das+Mulheres" alt="Thumb do vídeo">
+      <div class="card-content">
+        <div class="card-title">TV Rio Grande em Icém: Homenagem Especial para o Dia das Mulheres</div>
+        <a href="https://www.facebook.com/share/v/1ExwitZYsJ/" target="_blank">Assistir</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Saúde+em+Fronteira" alt="Thumb do vídeo">
+      <div class="card-content">
+        <div class="card-title">Moradores de Fronteira Revelam Relatos sobre a Saúde na Cidade</div>
+        <a href="https://www.facebook.com/share/v/1ZZm2LPoHf/" target="_blank">Assistir</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Aniversário+Fronteira" alt="Thumb do vídeo">
+      <div class="card-content">
+        <div class="card-title">Parabéns Fronteira, 81 anos de felicidade e progresso!</div>
+        <a href="https://www.facebook.com/share/v/18wSvJabNj/" target="_blank">Assistir</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Inauguração+do+Fórum" alt="Thumb do vídeo">
+      <div class="card-content">
+        <div class="card-title">Grande Conquista: Inauguração do Fórum em Fronteira</div>
+        <a href="https://www.facebook.com/share/v/1ETw64Xjbq/" target="_blank">Assistir</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Subestação+Cemig" alt="Thumb do vídeo">
+      <div class="card-content">
+        <div class="card-title">Quem trouxe a subestação da Cemig para Fronteira? Descubra!</div>
+        <a href="https://www.facebook.com/share/v/1Fe7nqKSYS/" target="_blank">Assistir</a>
+      </div>
+    </div>
   </div>
+
 </body>
 </html>
